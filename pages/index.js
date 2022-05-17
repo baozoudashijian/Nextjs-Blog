@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+console.log('同构代码运行在两个环境 4')
 export default function Home() {
+  console.log('同构代码运行在两个环境 5')
   return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      {console.log('同构代码运行在两个环境 6')}
       <main>
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -17,17 +18,6 @@ export default function Home() {
 
 
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
 
       <style jsx>{`
         .container {
