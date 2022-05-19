@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+
 console.log('同构代码运行在两个环境 4')
 export default function Home() {
   console.log('同构代码运行在两个环境 5')
@@ -8,7 +9,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" key="title" />
       </Head>
       {console.log('同构代码运行在两个环境 6')}
       <main>
