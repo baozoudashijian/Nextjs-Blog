@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import styles from 'components/style'
+console.log(styles)
 export default function Home() {
   // todo 分析后台管理系统页面
   return (
@@ -16,34 +17,8 @@ export default function Home() {
         </h1>
         <Link href="/article">跳转文章详情</Link>
       </main>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-      
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-      `}</style>
-
+      {/* {s} */}
+      <style jsx>{styles}</style>
       <style jsx global>{`
         html,
         body {
