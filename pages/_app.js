@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import 'styles/global.css'
 import '../styles/normal.css'
-
+import variables from 'styles/variables.module.scss'
+console.log(variables)
 export default function App({ Component, pageProps }) {
-
+    pageProps = {...pageProps, variables}
     return (
         <div className="zrj">
             <Head>

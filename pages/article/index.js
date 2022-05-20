@@ -2,7 +2,9 @@ import Link from "next/link";
 import styles from "../../styles/Article.module.css"
 
 
-export default function Article() {
+export default function Article(props) {
+
+    console.log(props, 'article')
 
     return (
         <>
