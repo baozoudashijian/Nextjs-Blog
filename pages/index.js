@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from 'components/style'
-console.log(styles)
+
 export default function Home(props) {
   // todo 分析后台管理系统页面
-  console.log(props, '123')
   return (
     <div className="container">
       <Head>
