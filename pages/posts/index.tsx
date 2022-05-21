@@ -1,13 +1,12 @@
 import axios, { AxiosResponse } from "axios"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
-type Article = {
-    name?: string
-}
+type Article = [string] | []
 
 export default function Post() {
 
-    const [article, setArticle] = useState<Article>({name: ''})
+    const [article, setArticle] = useState<Article>([])
 
     useEffect(() => {
         axios.get('/api/v1/post').then((res: AxiosResponse) => {
@@ -18,19 +17,14 @@ export default function Post() {
 
     return (
         <div className="wrapper">
-            {article.name}
-
-            <style jsx global>
-                {`
-                    body {
-                        background-color: #fff;
-                    }
-                    .wrapper {
-                        color: #000;
-                    }
-                `
-                }
-            </style>
+            {
+                article.map((item: string, index: number) => {
+                    return <p key={index}><Link href={{
+                        pathname: '/posts/detail',
+                        query: { id: item },
+                      }}>{item}</Link></p>
+                })
+            }
         </div>
 
     )

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import 'styles/global.css'
+// import 'styles/global.css'
 import '../styles/normal.css'
 import variables from 'styles/variables.module.scss'
 
