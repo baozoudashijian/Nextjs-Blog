@@ -24,4 +24,12 @@ const post = async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.end()
 }
+
+export const ssgPostList = async () => {
+    const md = path.join(process.cwd(), 'markdown')
+    const files = await readdir(md)
+
+    return files
+}
+
 export default post

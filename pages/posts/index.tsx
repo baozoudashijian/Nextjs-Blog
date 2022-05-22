@@ -2,7 +2,6 @@ import axios, { AxiosResponse } from "axios"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-type Article = [string] | []
 
 export default function Post() {
 

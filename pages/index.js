@@ -3,8 +3,6 @@ import Link from 'next/link'
 import styles from 'components/style'
 import  Post from "pages/posts/index.tsx"
 
-console.log(Post)
-
 export default function Home(props) {
   // todo 分析后台管理系统页面
   return (
@@ -18,9 +16,12 @@ export default function Home(props) {
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <Post />
-        <Link href="/article">跳转文章详情</Link>
+        <h1>客户端渲染（BSR）</h1>
+        <Link href="/article">跳转Atcile页面</Link>
         <Link href="/posts">跳转文章列表</Link>
+        <Post />
+        <h1>客户端渲染（SSG）</h1>
+        <Link href="/ssg">跳转文章列表</Link>
       </main>
       {/* {s} */}
       <style jsx>{styles}</style>
