@@ -3,7 +3,3 @@
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/basic-features/typescript for more information.
-type Article = [string] | []
-type ssgArticle = {
-    article : [];
-}
