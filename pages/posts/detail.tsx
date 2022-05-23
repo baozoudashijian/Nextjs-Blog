@@ -2,13 +2,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 import axios from "axios"
 
-type ContentProps = {
-    content?: string | '';
-    data?: {
-        title: string | '';
-        date: string | '';
-    }
-}
+
 
 export default function Detail() {
 
@@ -22,7 +16,6 @@ export default function Detail() {
 
     let getData = async (id: string) => {
         const { data } = await axios.get('/api/v1/post?id=' + id)
-        console.log(data)
         setContent(data)
     }
 
