@@ -1,6 +1,6 @@
 import { NextApiHandler, NextPage } from "next";
 import { NextRequest } from "next/server";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import parser from 'ua-parser-js'
 
 const Agent: NextPage = (props: any) => {
@@ -9,10 +9,15 @@ const Agent: NextPage = (props: any) => {
         console.log(document.body.clientWidth)
         console.log(props)
     }, [])
+
+    const handleClick = useCallback(() => {
+        console.log(document.body.clientHeight)
+    }, [])
+
     const { ua } = props
     
     return (
-        <div>当前访问的浏览器是{ua.browser.name}</div>
+        <div onClick={handleClick}>当前访问的浏览器是{ua.browser.name}</div>
     )
 }
 
