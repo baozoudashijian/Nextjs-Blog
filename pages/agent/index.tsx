@@ -5,7 +5,9 @@ import parser from 'ua-parser-js'
 
 const Agent: NextPage = (props: any) => {
     // useEffect只会在前端执行.
+    // 学习typeORM
     useEffect(() => {
+        console.log('学习typeORM')
         console.log(document.body.clientWidth)
         console.log(props)
     }, [])
